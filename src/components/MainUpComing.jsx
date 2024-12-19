@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 const MainUpComing = () => {
+	const APIKEY=process.env.REACT_APP_API_TMDB_KEY;
 	const [upComingMovies, setUpComingMoves]=useState([]);
 	const [isLoading, setLoading]=useState(true);
 
