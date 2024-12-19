@@ -19,7 +19,7 @@ const Search = () => {
 
   //입력처리 영화검색하는 함수
   const search = () =>{
-    const APIKEY=process.env.REACT_APP_API_KEY;
+    const APIKEY=process.env.REACT_APP_API_TMDB_KEY;
    // 기본문법 axios.get().then(()=>{}).catch(()=>{})
    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&language=ko&page=1&include_adult=false&query=${searchWord}`) //요청하는 주소
    .then((response)=>{ //요청한 값이 반환

@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
+    "gh-pages": "^6.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
@@ -38,5 +39,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://cjh7652.github.io/tmdb-movies"
+  "homepage": "https://jiho114.github.io/tmdb1"
 }

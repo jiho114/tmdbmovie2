@@ -6,7 +6,7 @@ import './SearchDetail.scss';
 
 
 const SearchDetail = () => {
-  const APIKEY=process.env.REACT_APP_API_KEY;
+  const APIKEY=process.env.REACT_APP_API_TMDB_KEY;
   const imgPath='http://image.tmdb.org/t/p/original';// tmdb의 이미지경로
   const {movieId} = useParams(); //각각의 아이디값
   const [detailInfo, setDetailInfo]=useState({}); //선택된 영화의 상세정보
@@ -22,7 +22,7 @@ const SearchDetail = () => {
     }
 
     try{
-      const response= await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=546c72b99cf64514c2c03c7ef473011b&language=ko`)
+      const response= await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${APIKEY}&language=ko`)
       setDetailInfo(response.data)
       console.log(response.data)
     } catch(error){

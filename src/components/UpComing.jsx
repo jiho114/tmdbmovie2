@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const UpComing = () => {
-  const APIKEY=process.env.REACT_APP_API_KEY;
+  const APIKEY=process.env.REACT_APP_API_TMDB_KEY;
   const [nextMovies, setNextMovies]=useState([]);
   const [isLoading, setLoading]=useState(true)
   const getMovies= async () => {

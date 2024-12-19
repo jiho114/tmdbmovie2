@@ -7,7 +7,7 @@ const MainUpComing = () => {
 
 	const getMovies= async () => {
 		try{
-			const response = await axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=546c72b99cf64514c2c03c7ef473011b&language=ko`);
+			const response = await axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${APIKEY}&language=ko`);
 			setUpComingMoves(response.data.results)
 			/* console.log(response) */
 			setLoading(false)

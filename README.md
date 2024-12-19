@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# 환경변수 .env
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+.env는 src같은 위치에 생성 (최상위 폴더) \
+.env 파일 안에 REACT_APP_API_TMDB_KEY="API _KEY" \
+주의점 : 맨 뒤에 세미콜론 쓰지 않기 \
 
-## Available Scripts
+## .gitignore 파일에 .env 올리지 않기 .env 작성
 
-In the project directory, you can run:
+gitignore에 있는 파일들은 깃에 올리지 말아야 할 파일들을 작성함 \
 
-### `npm start`
+## API KEY 사용
+변수 const api (변수명) = process.env.REACT_APP_API_TMDB_KEY;
+### 깃 배포하기 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+packge.json 수정하기 \
+패키지 제이슨 하단에 홈페이지 주소 삽입 \
+"homepage": "https://jiho114.github.io/tmdb1" 깃 허브 홈페이지 주소\ 
+(https://jiho114.github.io/tmdb1) \
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+script 수정 \
+"predeploy": "npm run build", \
+"deploy": "gh-pages -d build" \
 
-### `npm test`
+깃저장소 업로드
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 터미널에서 gh-pages 설치하기
+npm i gh-pages 명령어
 
-### `npm run build`
+### 깃허브 저장소 다시 확인하기
+git remote -v \
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 깃허브 배포하기
+npm run deploy
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

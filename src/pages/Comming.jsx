@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const Comming = () => {
-  const APIKEY=process.env.REACT_APP_API_KEY;
+  const APIKEY=process.env.REACT_APP_API_TMDB_KEY;
   const {id} =useParams();
   const [isLoading, setLoading]=useState(true);
   const [commingM, setCommingM] = useState(null);
